@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexSalud - Seguridad Farmacológica Avanzada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
+        }
+        
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
 
+        .logo-pill {
+            background: white;
+            border-radius: 9999px;
+            padding: 5px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text-nex-blue { color: #0066ff; }
+        .bg-nex-blue { background-color: #0066ff; }
+
+        /* Animación de pulso para el icono del logo */
+        @keyframes pulse-heart {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .heart-icon { animation: pulse-heart 2s infinite ease-in-out; }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .floating {
+            animation: floating 3s infinite ease-in-out;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed w-full z-50 nav-glass">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="logo-pill">
+                <svg class="heart-icon w-8 h-8 text-nex-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h2l2 3 2-6 2 3h2M3 12h3"></path>
+                    <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+                </svg>
+                <span class="text-2xl font-bold text-nex-blue tracking-tight">NexSalud</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#inicio" class="hover:text-blue-600 transition">Inicio</a>
+                <a href="#pilares" class="hover:text-blue-600 transition">Nexora & Nexlife</a>
+                <a href="#compromiso" class="hover:text-blue-600 transition">Compromiso</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="min-h-screen pt-32 pb-20 gradient-bg flex items-center relative overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+                    Erradicando riesgos, <span class="text-blue-600">transformando</span> la seguridad farmacológica.
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg">
+                    NexSalud es una solución tecnológica avanzada diseñada para actuar como un puente inteligente entre establecimientos sanitarios y ciudadanos.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#pilares" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition transform hover:scale-105">Explorar Pilares</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="floating w-80 h-80 bg-white rounded-3xl shadow-2xl flex items-center justify-center p-8 border-4 border-blue-50">
+                    <div class="text-center">
+                        <svg class="w-32 h-32 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                        <span class="text-xl font-bold text-slate-800">Smart Pharma Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-20 right-0 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Presentación Institucional</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl leading-relaxed text-slate-600">
+                    A través de la integración de datos y el análisis preventivo, dotamos a los profesionales de herramientas de decisión en tiempo real para garantizar que cada tratamiento sea seguro, necesario y supervisado. Erradicamos riesgos derivados de la automedicación y el consumo irregular.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Los Pilares de Nuestro Servicio</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="card-hover bg-white p-10 rounded-[3rem] border border-blue-100 shadow-xl" data-aos="fade-right">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-blue-600 mb-4">Nexora</h3>
+                    <p class="font-semibold text-slate-500 mb-6 uppercase tracking-widest text-sm">Gestión Farmacéutica Inteligente</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Registro centralizado de ventas con potencial de abuso.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Alertas automáticas de patrones de consumo irregulares.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Historial farmacológico unificado entre establecimientos.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white p-10 rounded-[3rem] border border-pink-100 shadow-xl" data-aos="fade-left">
+                    <div class="w-16 h-16 bg-pink-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-pink-200">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-pink-600 mb-4">Nexlife</h3>
+                    <p class="font-semibold text-slate-500 mb-6 uppercase tracking-widest text-sm">Empoderamiento del Paciente</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-pink-100 text-pink-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Consulta de historial personalizado de medicación.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-pink-100 text-pink-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Información rigurosa sobre efectos adversos y dependencia.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 bg-pink-100 text-pink-600 p-1 rounded-full"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg></span>
+                            <span>Fomento de una cultura de autocuidado responsable.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compromiso" class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-6">Justificación y Compromiso Social</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Surge para solucionar la falta de control centralizado y el desconocimiento del paciente. Estamos alineados con los Objetivos de Desarrollo Sostenible (ODS).
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-bold">ODS 3: Salud</span>
+                        <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-bold">ODS 9: Innovación</span>
+                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-bold">ODS 10: Igualdad</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="bg-blue-600 h-40 rounded-3xl flex items-center justify-center text-white text-3xl font-bold">ODS 3</div>
+                    <div class="bg-pink-500 h-40 rounded-3xl flex items-center justify-center text-white text-3xl font-bold mt-8">ODS 9</div>
+                    <div class="bg-indigo-500 h-40 rounded-3xl flex items-center justify-center text-white text-3xl font-bold -mt-8">ODS 10</div>
+                    <div class="bg-slate-800 h-40 rounded-3xl flex items-center justify-center text-white text-3xl font-bold">SDG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6 flex justify-center items-center gap-2">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h2l2 3 2-6 2 3h2M3 12h3"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                <span class="text-xl font-bold tracking-tight">NexSalud</span>
+            </div>
+            <p class="text-slate-400">&copy; 2024 NexSalud. Digitalización para un sistema preventivo.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+</body>
+</html>
